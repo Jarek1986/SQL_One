@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject_sql_two.FXMLController">
+    <children>
+      <TabPane layoutX="47.0" layoutY="20.0" prefHeight="626.0" prefWidth="576.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab1" text="Review database">
+            <content>
+              <AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="554.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="14.0" text="Select table:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listViewFour" layoutX="38.0" layoutY="41.0" onKeyPressed="#KeyboardAction3" onKeyReleased="#KeyboardAction3" onMouseClicked="#ButtonAction2B" prefHeight="195.0" prefWidth="200.0" />
+                        <Label layoutX="38.0" layoutY="245.0" text="Select chart x values:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="483.0" text="Select chart y values">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listViewFive" layoutX="38.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="listViewSix" layoutX="38.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button layoutX="38.0" layoutY="726.0" mnemonicParsing="false" onAction="#ButtonAction9" prefHeight="25.0" prefWidth="199.0" text="Create chart" />
+                        <BarChart fx:id="BarChartOne" animated="false" layoutX="273.0" layoutY="28.0" prefHeight="729.0" prefWidth="704.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="myXaxis" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="myYaxis" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab2" text="Table structure">
+               <content>
+                  <AnchorPane fx:id="anchorPane2" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="paneOneTableCreation" layoutX="-6.0" prefHeight="320.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ListView fx:id="listViewOne" layoutX="263.0" layoutY="56.0" onKeyPressed="#KeyboardAction2" onKeyReleased="#KeyboardAction2" onMouseClicked="#ButtonAction2" prefHeight="177.0" prefWidth="200.0" />
+                              <Label layoutX="82.0" layoutY="150.0" text="Enter table name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textField1TableStructure" layoutX="60.0" layoutY="172.0" />
+                              <Label layoutX="343.0" layoutY="30.0" text="Tables">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="60.0" layoutY="76.0" mnemonicParsing="false" onAction="#ButtonAction3" prefHeight="25.0" prefWidth="149.0" text="Delete table" />
+                              <Button layoutX="61.0" layoutY="203.0" mnemonicParsing="false" onAction="#ButtonAction1" prefHeight="25.0" prefWidth="148.0" text="Create table" />
+                              <Label alignment="CENTER" layoutX="54.0" layoutY="56.0" prefHeight="20.0" prefWidth="161.0" text="Select table from 'Tables'">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="178.0" layoutY="3.0" text="Tables configurations">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textField2TableStructure" layoutX="59.0" layoutY="274.0" prefHeight="32.0" prefWidth="405.0" />
+                              <Label layoutX="60.0" layoutY="247.0" text="Log">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneTwoTableCreation" layoutX="14.0" layoutY="400.0" prefHeight="457.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="318.0">
+                           <children>
+                              <Label layoutX="36.0" layoutY="50.0" prefHeight="20.0" prefWidth="176.0" text="Select table from Tables">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="176.0" layoutY="8.0" text="Table modification">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="337.0" layoutY="50.0" text="Columns">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ListView fx:id="listViewTwo" layoutX="264.0" layoutY="78.0" onKeyPressed="#KeyboardAction1" onKeyReleased="#KeyboardAction1" onMouseClicked="#ButtonAction6" prefHeight="271.0" prefWidth="200.0" />
+                              <Label layoutX="36.0" layoutY="127.0" text="Select column  from 'Columns'">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="56.0" layoutY="147.0" mnemonicParsing="false" onAction="#ButtonAction7" prefHeight="25.0" prefWidth="149.0" text="Delete column" />
+                              <Label layoutX="82.0" layoutY="183.0" text="Add column">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="84.0" layoutY="211.0" text="Column type">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="ComboBox3TableCreation" layoutX="56.0" layoutY="231.0" prefWidth="150.0" />
+                              <Label layoutX="86.0" layoutY="265.0" text="Column name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textField3TableStructure" layoutX="57.0" layoutY="291.0" />
+                              <Button layoutX="56.0" layoutY="323.0" mnemonicParsing="false" onAction="#ButtonAction4" prefHeight="25.0" prefWidth="150.0" text="Add" />
+                              <Label layoutX="73.0" layoutY="100.0" text="Delete column">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="80.0" text="Table name:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label1TableStrucuture" layoutX="117.0" layoutY="80.0" prefHeight="17.0" prefWidth="125.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textField4TableStructure" layoutX="56.0" layoutY="399.0" prefHeight="33.0" prefWidth="405.0" />
+                              <Label layoutX="59.0" layoutY="372.0" text="Log">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="264.0" layoutY="349.0" text="Column type:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label2ColumnType" layoutX="364.0" layoutY="349.0" prefHeight="17.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneThreeTableCreation" layoutX="500.0" prefHeight="775.0" prefWidth="512.0" AnchorPane.leftAnchor="498.0">
+                           <children>
+                              <Label layoutX="185.0" layoutY="1.0" text="Data modification">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableViewOne" layoutX="39.0" layoutY="28.0" prefHeight="182.0" prefWidth="433.0">
+                                  <ScrollPane fx:id="yourScrollPane1" hbarPolicy="ALWAYS" />
+                                  <ScrollPane fx:id="yourScrollPane2" vbarPolicy="ALWAYS" />
+                              </TableView>
+                              <Label alignment="CENTER" layoutX="41.0" layoutY="545.0" prefHeight="17.0" prefWidth="432.0" text="Execute SQL">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldSQLexecute" layoutX="39.0" layoutY="572.0" prefHeight="59.0" prefWidth="433.0" />
+                              <Label layoutX="40.0" layoutY="670.0" text="SQL Log">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="213.0" layoutY="637.0" mnemonicParsing="false" onAction="#ButtonAction8" text="Execute code" />
+                              <Label layoutX="39.0" layoutY="210.0" prefHeight="27.0" prefWidth="102.0" text="Table name:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label3TableName" layoutX="141.0" layoutY="210.0" prefHeight="27.0" prefWidth="331.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ListView fx:id="listViewThree" layoutX="41.0" layoutY="283.0" prefHeight="256.0" prefWidth="102.0" />
+                              <Label layoutX="39.0" layoutY="237.0" text="Column:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label4ColumnName" alignment="CENTER" layoutX="40.0" layoutY="256.0" prefHeight="27.0" prefWidth="104.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="textAreaOne" editable="false" layoutX="39.0" layoutY="702.0" prefHeight="59.0" prefWidth="432.0" />
+                              <Label layoutX="223.0" layoutY="237.0" text="SQL example code:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextArea editable="false" layoutX="182.0" layoutY="288.0" prefHeight="200.0" prefWidth="292.0" text="INSERT INTO table_name (Column1, Column2) VALUES ('Jarek', 2)&#10;DELETE FROM tabme_name WHERE condition&#10;SELECT AVG(Column) FROM table_name&#10;DELETE FROM table_name WHERE Column1='Jan'" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+#anchorPane1 {
+    -fx-background-color: white;
+}
+#anchorPane2 {
+    -fx-background-color: aliceblue;    
+}
+#tab1 {
+    -fx-background-color: white; 
+    
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+       
+}
+#tab2 {
+    -fx-background-color: aliceblue;
+    
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;  
+}
+
+#paneOneTableCreation{
+    -fx-border-width: 2;
+    -fx-background-color: aliceblue; 
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 2px;
+}
+
+#paneTwoTableCreation{
+    -fx-border-width: 2;
+    -fx-background-color: aliceblue; 
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 2px;
+}
+#paneThreeTableCreation{
+    -fx-border-width: 2;
+    -fx-background-color: aliceblue; 
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 2px;
+}
+
+#myYaxis.axis {
+    -fx-font-size: 20;
+}
+
+
